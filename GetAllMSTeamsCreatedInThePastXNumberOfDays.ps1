@@ -54,8 +54,7 @@ else
  
 if ($null -eq $cred)
 {
-    #$cred = Get-Credential -Message "Enter an account with Teams Administrative credentials"
-    $cred = Get-PnPStoredCredential -Name Leon -Type PSCredential
+    $cred = Get-Credential -Message "Enter an account with Teams Administrative credentials"
 }
  
 try
