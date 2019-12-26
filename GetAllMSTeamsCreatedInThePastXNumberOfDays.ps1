@@ -61,7 +61,7 @@ try
 {
     Connect-MicrosoftTeams -Credential $cred -ErrorAction Stop
     Connect-PnPOnline -Url $SPOAdminSite -Credentials $cred -ErrorAction Stop
-    Connect-AzureAD -Credential $cred
+    Connect-AzureAD -Credential $cred -ErrorAction Stop
     $teams = Get-Team -ErrorAction Stop
     $list = Get-PnPList -Identity "/Lists/DO_NOT_DELETE_SPLIST_TENANTADMIN_AGGREGATED_SITECO" -ErrorAction Stop
     $sites = Get-PnPListItem -List $list -Query `
